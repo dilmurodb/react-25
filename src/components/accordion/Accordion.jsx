@@ -22,7 +22,11 @@ export default function Accordion() {
     }
 
     return  <div>
-                <button onClick={handleButtonClick}>Enable multiple selection</button>
+                <button onClick={handleButtonClick}>{multipleSelection ? 
+                'Disable multiple selection'
+                 : 
+                'Enable multiple selection'}
+                </button>
                 <div className="wrapper">
                     <div className="accordion">
                         {data && data.length > 0 
@@ -36,7 +40,7 @@ export default function Accordion() {
                                         <h3>{item.question}</h3>
                                         <span>+</span>
                                     </div>
-                                    {multipleSelected && }
+                                    {/* {multipleSelected && } */}
                                 </div>))}
                              </div>
                             )
