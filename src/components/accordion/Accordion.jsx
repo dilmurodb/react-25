@@ -5,7 +5,7 @@ import './Accordion.css'
 export default function Accordion() {
 
     const [selected, setSelected] = useState(null)
-    const [multipleSelected, setMultipleSelected] = useState(null)
+    const [multipleSelected, setMultipleSelected] = useState([])
     const [multipleSelection, setMultipleSelection] = useState(false)
 
     const handleClick = (id) => {
@@ -18,7 +18,15 @@ export default function Accordion() {
     }
 
     const handleMultipleSelection = (id) => {
-        setMultipleSelected(id)
+        const selectedList = [...multipleSelected]
+        const indexOfSelectedId = selectedList.indexOf(id)
+        console.log(indexOfSelectedId)
+        if (indexOfSelectedId === -1) {
+            selectedList.push(id)
+        } else {
+            selectedList.splice(indexOfSelectedId, 1)
+        }
+        setMultipleSelected(selectedList)
     }
 
     return  <div>
@@ -40,7 +48,12 @@ export default function Accordion() {
                                         <h3>{item.question}</h3>
                                         <span>+</span>
                                     </div>
-                                    {/* {multipleSelected && } */}
+                                    {multipleSelected.map((itemId => itemId === item.id
+                                         ? 
+                                        (<div className="content" key={item.id}>{item.answer}</div>)
+                                         : 
+                                         null))
+                                    }
                                 </div>))}
                              </div>
                             )
