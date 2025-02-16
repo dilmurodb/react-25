@@ -19,7 +19,10 @@ export default function RandomColor() {
         setColor(randomHex)
     }
     const handleRgbColGen = () => {
-
+        const r = handleRandom(256)
+        const g = handleRandom(256)
+        const b = handleRandom(256)
+        setColor(`rgb(${r}, ${g}, ${b})`)
     }
     const handleRandomColGen = () => {
 
