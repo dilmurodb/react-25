@@ -9,12 +9,10 @@ export default function StarRating({numOfStars = 5}) {
     const [hover, setHover] = useState(0)
 
     const handleMouseClick = (index) => {
-        console.log(index)
         setRating(index)
     }
 
     const handleMouseEnter = (index) => {
-        console.log(index)
         setHover(index)
     }
 
