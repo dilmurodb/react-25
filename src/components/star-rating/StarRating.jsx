@@ -10,14 +10,16 @@ export default function StarRating({numOfStars = 5}) {
 
     const handleMouseClick = (index) => {
         console.log(index)
+        setRating(index)
     }
 
     const handleMouseEnter = (index) => {
         console.log(index)
+        setHover(index)
     }
 
-    const handleMouseLeave = (index) => {
-        console.log(index)
+    const handleMouseLeave = () => {
+        setHover(rating)
     }
 
     return <div className="star-rating">
@@ -25,10 +27,11 @@ export default function StarRating({numOfStars = 5}) {
                     [...Array(numOfStars)].map((_, index) => {
                         index += 1
                         return <FaStar
+                                    className={ index <= (hover || rating) ? 'active' : 'inactive'}
                                     key={index}
                                     onClick={() => handleMouseClick(index)}
                                     onMouseMove={() => handleMouseEnter(index)}
-                                    onMouseLeave={() => handleMouseLeave(index)}
+                                    onMouseLeave={() => handleMouseLeave()}
                                     size={40} />
                     })
                 }

@@ -2,3 +2,11 @@
     background-color: steelblue;
     height: 100vh;
 }
+
+.active {
+    color: gold;
+}
+
+.inactive {
+    color: black;
+}
