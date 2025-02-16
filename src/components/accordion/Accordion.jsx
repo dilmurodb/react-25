@@ -20,7 +20,6 @@ export default function Accordion() {
     const handleMultipleSelection = (id) => {
         const selectedList = [...multipleSelected]
         const indexOfSelectedId = selectedList.indexOf(id)
-        console.log(indexOfSelectedId)
         if (indexOfSelectedId === -1) {
             selectedList.push(id)
         } else {
