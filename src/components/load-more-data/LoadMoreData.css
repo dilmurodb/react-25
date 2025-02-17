@@ -1,0 +1,10 @@
+.load-more-data {
+    height: 100vh;
+    background-color:antiquewhite;
+}
+
+.data-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
