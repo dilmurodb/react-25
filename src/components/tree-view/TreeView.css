@@ -1,0 +1,31 @@
+.tree-view {
+    display: flex;
+    height: 100vh;
+}
+
+.menu {
+    width: 30vw;
+    background-color: royalblue;
+}
+
+.page {
+    width: 70vw;
+}
+
+li {
+    list-style-type: none;
+    color: white;
+}
+
+.plus::after {
+    content: "+";
+    color: white;
+    font-size: 2rem;
+    margin-left: 5px;
+  }
+.minus::after {
+    content: "-";
+    color: white;
+    font-size: 2rem;
+    margin-left: 5px;
+  }
