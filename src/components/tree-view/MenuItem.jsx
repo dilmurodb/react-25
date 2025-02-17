@@ -1,5 +1,7 @@
 import './TreeView.css'
 import { useState } from 'react'
+import ProfileItem from './ProfileItem'
+import SettingsItem from './SettingsItem'
 
 
 export default function MenuItem ({ data }) {
@@ -11,14 +13,37 @@ export default function MenuItem ({ data }) {
     }
 
     return <>
-                <li onClick={handleClick} 
-                className={ toggle 
+                { data.children 
                     ?
-                'plus'
+                <>
+                    <li onClick={handleClick} 
+                    className={ toggle 
+                        ?
+                    'plus'
+                        :
+                    'minus'}
+                    >
+                        {data.label}
+                    </li>
+                    {
+                        data.children && !toggle && data.label === 'Profile'
+                             ? 
+                        <ProfileItem data={data} />
+                             : 
+                        null
+                    }
+                    {
+                        data.children && !toggle && data.label === 'Settings' 
+                            ? 
+                        <SettingsItem data={data} /> 
+                            : 
+                        null
+                    }
+                </>
                     :
-                'minus'}
-                >
+                <li>
                     {data.label}
                 </li>
+                }
            </>
 }

@@ -9,7 +9,8 @@ export default function MenuList ({ data }) {
                 data.map((item, index) => (
                     <MenuItem 
                             key={index}
-                            data={item}/>
+                            data={item}
+                    />
                 ))
                  :
                 null
