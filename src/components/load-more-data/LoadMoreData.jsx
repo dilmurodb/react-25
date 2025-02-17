@@ -10,8 +10,8 @@ export default function LoadMoreData({ url, limit, skip }) {
     const [errorMsg, setErrorMsg] = useState(null)
 
     const handleSkipNum = () => {
-        let curNum = skipNum
-        let newSkipNum = Number(curNum) + 20
+        let currentSkipNum = skipNum
+        let newSkipNum = Number(currentSkipNum) + 20
         let strNewSkipNum = newSkipNum.toString() 
         setSkipNum(strNewSkipNum)
     }
@@ -41,7 +41,7 @@ export default function LoadMoreData({ url, limit, skip }) {
     return <div className='load-more-data'>
             <div className='data-content'>
                 {isLoading ?
-                <div>Data is Loading...</div> 
+                <div className="is-loading">Data is Loading...</div> 
                 : 
                 null}
                 {errorMsg ?
@@ -60,6 +60,14 @@ export default function LoadMoreData({ url, limit, skip }) {
                     null
                 }
             </div>
-            <button disabled={arrayData.length >= 99 ? true : false } onClick={handleSkipNum}>Load more items</button>
+            <button disabled={arrayData.length >= 99
+                 ?
+                true 
+                 : 
+                false}
+                onClick={handleSkipNum}
+                >
+                    Load more items
+                </button>
            </div>
 }
