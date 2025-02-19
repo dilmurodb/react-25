@@ -23,7 +23,7 @@ export default function MenuItem ({ item }) {
                     null
                 }
                 {
-                    item && item.children && item.children.length > 0
+                    !toggle && item && item.children && item.children.length > 0
                         ? 
                     <MenuList 
                         data={item.children}
