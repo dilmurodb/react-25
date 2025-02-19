@@ -4,20 +4,25 @@
 }
 
 .menu {
-    width: 30vw;
+    width: 40vw;
     background-color: royalblue;
 }
 
 .page {
-    width: 70vw;
+    width: 60vw;
 }
 
 li {
+    align-content: start;
     list-style-type: none;
     color: white;
 }
 
-.plus::after {
+span {
+    font-size: 2rem;
+}
+
+/* .plus::after {
     content: "+";
     color: white;
     font-size: 2rem;
@@ -28,4 +33,4 @@ li {
     color: white;
     font-size: 2rem;
     margin-left: 5px;
-  }
+  } */

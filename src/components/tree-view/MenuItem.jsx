@@ -1,7 +1,5 @@
-import './TreeView.css'
 import { useState } from 'react'
-// import ProfileItem from './ProfileItem'
-// import SettingsItem from './SettingsItem'
+import './TreeView.css'
 import MenuList from './MenuList'
 
 
@@ -18,7 +16,20 @@ export default function MenuItem ({ item }) {
                     item.label
                 }
                 {
-                    item.children ? <MenuList data={item.children} /> : null
+                    item && item.children && item.children.length > 0
+                        ?
+                    <span onClick={handleClick}>{toggle ? '+' : '-'}</span>
+                        :
+                    null
+                }
+                {
+                    item && item.children && item.children.length > 0
+                        ? 
+                    <MenuList 
+                        data={item.children}
+                    />
+                        : 
+                    null
                 }
            </li>
 }
