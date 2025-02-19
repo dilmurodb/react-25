@@ -5,6 +5,7 @@ import StarRating from './components/star-rating/StarRating';
 import ImageSlider from './components/image-slider/ImageSlider';
 import LoadMoreData from './components/load-more-data/LoadMoreData';
 import TreeView from './components/tree-view/TreeView';
+import QrCodeGenerator from './components/qr-code-generator/QrCodeGenerator';
 
 function App() {
   return (
@@ -25,7 +26,10 @@ function App() {
                   url = {'https://dummyjson.com/products'}
                   limit = {'20'}
                   skip = {'0'} />
+      {/* Tree View Component */}
       <TreeView />
+      {/* QR Code Generator Component */}
+      <QrCodeGenerator />
     </div>
   );
 }
