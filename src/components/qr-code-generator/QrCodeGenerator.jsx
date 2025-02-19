@@ -21,7 +21,9 @@ export default function QrCodeGenerator () {
                     placeholder='Enter your value here'
                     name='qr-code'
                     value={input}/>
-            <button onClick={handleQrCodeGenerator}>Generate</button>
+            <button 
+                disabled={input === '' ? true : false}
+                onClick={handleQrCodeGenerator}>Generate</button>
         </div>
         <div>
             <QRCode
