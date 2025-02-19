@@ -15,22 +15,10 @@
 li {
     align-content: start;
     list-style-type: none;
+    cursor: pointer;
     color: white;
 }
 
 span {
     font-size: 2rem;
 }
-
-/* .plus::after {
-    content: "+";
-    color: white;
-    font-size: 2rem;
-    margin-left: 5px;
-  }
-.minus::after {
-    content: "-";
-    color: white;
-    font-size: 2rem;
-    margin-left: 5px;
-  } */
