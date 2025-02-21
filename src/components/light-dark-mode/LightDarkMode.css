@@ -1,33 +1,31 @@
-.l-d-mode-l-bck {
+:root {
+    --background: #ffffff;
+    --text-primary: #000000;
+    --btn-background: #000000;
+    --btn-text: #ffffff;
+}
+
+[data-theme='dark'] {
+    --background: #000000;
+    --text-primary: #ffffff;
+    --btn-background: #ffffff;
+    --btn-text: #000000;
+}
+
+.light-dark-mode {
     height: 100vh;
-    background-color: papayawhip;
-}
-.l-d-mode-d-bck {
-    height: 100vh;
-    background-color: black;
+    background-color: var(--background)
 }
 
-.l-d-mode-l-h1 {
-    color: black;
-}
-.l-d-mode-d-h1 {
-    color: white;
+.light-dark-mode h1 {
+    color: var(--text-primary)
 }
 
-
-.l-d-mode-l-p {
-    color: black;
-}
-.l-d-mode-d-p {
-    color: white;
+.light-dark-mode p {
+    color: var(--text-primary)
 }
 
-
-.l-d-mode-l-btn {
-    color: white;
-    background-color: black;
-}
-.l-d-mode-d-btn {
-    color: white;
-    background-color: grey;
+.light-dark-mode button {
+    color: var(--btn-text);
+    background-color: var(--btn-background)
 }

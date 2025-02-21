@@ -16,11 +16,11 @@ export default function LightDarkMode () {
         
     }
 
-    return <div className={theme === 'light' ? 'l-d-mode-l-bck' : 'l-d-mode-d-bck'}>
+    return <div className="light-dark-mode" data-theme={theme}>
                 <div>
-                    <h1 className={theme === 'light' ? 'l-d-mode-l-h1' : 'l-d-mode-d-h1'}>Light Dark Mode component!</h1>
-                    <p className={theme === 'light' ? 'l-d-mode-l-p' : 'l-d-mode-d-p'}>Hello World!</p>
-                    <button className={theme === 'light' ? 'l-d-mode-l-btn' : 'l-d-mode-d-btn'} onClick={handleThemeChange}>Change Theme</button>
+                    <h1>Light Dark Mode component!</h1>
+                    <p>Hello World!</p>
+                    <button onClick={handleThemeChange}>Change Theme</button>
                 </div>
            </div>
 }
