@@ -3,13 +3,13 @@
     height: 100vh;
 }
 
-.menu {
-    width: 40vw;
+.tree-view-menu {
+    width: 60vw;
     background-color: royalblue;
 }
 
-.page {
-    width: 60vw;
+.tree-view-page {
+    width: 70vw;
 }
 
 li {
@@ -19,6 +19,6 @@ li {
     color: white;
 }
 
-span {
+.plus-minus-sign {
     font-size: 2rem;
 }

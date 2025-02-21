@@ -13,12 +13,16 @@ export default function MenuItem ({ item }) {
 
     return <li>
                 {
-                    item.label
+                    item && item.children && item.children.length > 0
+                        ?
+                    <span onClick={handleClick}>{item.label}</span>
+                        :
+                    <span>{item.label}</span>
                 }
                 {
                     item && item.children && item.children.length > 0
                         ?
-                    <span onClick={handleClick}>{toggle ? '+' : '-'}</span>
+                    <span className="plus-minus-sign" onClick={handleClick}>{toggle ? '+' : '-'}</span>
                         :
                     null
                 }
