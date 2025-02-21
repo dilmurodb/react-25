@@ -7,6 +7,7 @@ import LoadMoreData from './components/load-more-data/LoadMoreData';
 import TreeView from './components/tree-view/TreeView';
 import QrCodeGenerator from './components/qr-code-generator/QrCodeGenerator';
 import LightDarkMode from './components/light-dark-mode/LightDarkMode';
+import ScrollIndicator from './components/scroll-indicator/ScrollIndicator';
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
       <QrCodeGenerator />
       {/* Light Dark Mode Component */}
       <LightDarkMode />
+      {/* Scroll Indicator Component */}
+      <ScrollIndicator url={'https://dummyjson.com/quotes'}/>
     </div>
   );
 }
