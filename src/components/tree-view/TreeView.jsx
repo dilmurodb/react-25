@@ -5,7 +5,6 @@ import data from './data'
 
 
 export default function TreeView () {
-    console.log(data)
     return <div className='tree-view'>
             <div className='tree-view-menu'>
                 <MenuList data={data}/>

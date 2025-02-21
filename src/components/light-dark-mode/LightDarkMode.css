@@ -1,4 +1,33 @@
-.light-dark-mode {
+.l-d-mode-l-bck {
     height: 100vh;
     background-color: papayawhip;
+}
+.l-d-mode-d-bck {
+    height: 100vh;
+    background-color: black;
+}
+
+.l-d-mode-l-h1 {
+    color: black;
+}
+.l-d-mode-d-h1 {
+    color: white;
+}
+
+
+.l-d-mode-l-p {
+    color: black;
+}
+.l-d-mode-d-p {
+    color: white;
+}
+
+
+.l-d-mode-l-btn {
+    color: white;
+    background-color: black;
+}
+.l-d-mode-d-btn {
+    color: white;
+    background-color: grey;
 }
