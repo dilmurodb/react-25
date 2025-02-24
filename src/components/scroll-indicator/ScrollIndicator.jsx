@@ -14,7 +14,8 @@ export default function ScrollIndicator({ url }) {
             const response = await fetch(url)
             if (!response.ok) throw Error('Did not receive expected data!')
             const items = await response.json()
-            setData(items)
+            const itemsArray = items.products 
+            setData(itemsArray)
             setErrorMsg(null)
         } catch (err) {
             setErrorMsg(err.message)
@@ -27,7 +28,14 @@ export default function ScrollIndicator({ url }) {
         fetchData()
     }, [url])
 
-    console.log(data)
-
-    return <div className="scroll-indicator">Scroll Indicator component</div>
+    return <div className="scroll-indicator">
+                <h1>Scroll Indicator component</h1>
+                {isLoading ? <h3>Data is loading...</h3> : null}
+                { errorMsg ? <h3>{errorMsg}</h3> : null}
+                {data && data.length > 0
+                    ?
+                data.map(item => <p key={item.id}>{item.title}</p>)
+                    :
+                null}
+           </div>
 }

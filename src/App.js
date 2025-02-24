@@ -35,7 +35,7 @@ function App() {
       {/* Light Dark Mode Component */}
       <LightDarkMode />
       {/* Scroll Indicator Component */}
-      <ScrollIndicator url={'https://dummyjson.com/quotes'}/>
+      <ScrollIndicator url={'https://dummyjson.com/products'}/>
     </div>
   );
 }
