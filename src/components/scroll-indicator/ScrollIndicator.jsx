@@ -55,7 +55,6 @@ export default function ScrollIndicator({ url }) {
             window.removeEventListener('scroll', () => {})
         }
     }, [])
-    console.log(scrollPercentage)
 
     return <div className="scroll-indicator">
                 <div className="top-container">
