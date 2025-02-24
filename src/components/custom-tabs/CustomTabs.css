@@ -1,0 +1,17 @@
+.custom-tabs {
+    height: 100vh;
+    background-color: aqua;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+}
+
+.tab {
+    height: 30px;
+    width: 60px;
+    color: white;
+    background-color: black;
+}

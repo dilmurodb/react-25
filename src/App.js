@@ -8,6 +8,7 @@ import TreeView from './components/tree-view/TreeView';
 import QrCodeGenerator from './components/qr-code-generator/QrCodeGenerator';
 import LightDarkMode from './components/light-dark-mode/LightDarkMode';
 import ScrollIndicator from './components/scroll-indicator/ScrollIndicator';
+import CustomTabs from './components/custom-tabs/CustomTabs';
 
 function App() {
   return (
@@ -36,6 +37,8 @@ function App() {
       <LightDarkMode />
       {/* Scroll Indicator Component */}
       <ScrollIndicator url={'https://dummyjson.com/products?limit=100'}/>
+      {/* Custom Tabs Component */}
+      <CustomTabs />
     </div>
   );
 }
