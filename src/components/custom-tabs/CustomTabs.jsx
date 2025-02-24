@@ -1,8 +1,17 @@
 import './CustomTabs.css'
 import Tab from './Tab'
+import { useState } from 'react'
 
 
 export default function CustomTabs() {
+
+    const [currentTab, setCurrentTab] = useState('')
+
+    const handleClick = (id) => {
+        const currentContentObj = data.filter(item => item.id === id)
+        const currentContent = currentContentObj[0].content
+        setCurrentTab(currentContent)
+    }
 
     const data = [
         {
@@ -23,6 +32,8 @@ export default function CustomTabs() {
     ]
 
     return <div className="custom-tabs">
-                <Tab data={data} />
+                <Tab data={data}
+                     currentTab={currentTab}
+                     handleClick={handleClick} />
            </div>
 }
