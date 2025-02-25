@@ -40,21 +40,17 @@ export default function CustomModalPopup({ url }) {
     }
 
     const handleStartClick = (id) => {
-        console.log('You clicked handleStartClick!', id)
         setClickStart(true)
         setCurrentPopup(data[0])
     }
 
     const handleNextClick = (id) => {
-        console.log('You clicked handleNextClick!', id)
         setCurrentPopup(data[id])
     }
 
     const handlePreviousClick = (id) => {
       
     }
-
-    console.log(data)
 
     return <div className="custom-modal-popup">
                 {/* {
