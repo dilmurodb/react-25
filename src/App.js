@@ -10,6 +10,7 @@ import LightDarkMode from './components/light-dark-mode/LightDarkMode';
 import ScrollIndicator from './components/scroll-indicator/ScrollIndicator';
 import CustomTabs from './components/custom-tabs/CustomTabs';
 import CustomModalPopup from './components/custom-modal-popup/CustomModalPopup';
+import ProfileFinder from './components/github-profile-finder/ProfileFinder';
 
 function App() {
   return (
@@ -42,6 +43,8 @@ function App() {
       <CustomTabs />
       {/* Custom Modal Popup Component */}
       <CustomModalPopup url={'https://dummyjson.com/users'}/>
+      {/* GitHub Profile Finder Component */}
+      <ProfileFinder />
     </div>
   );
 }
