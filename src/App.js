@@ -44,7 +44,7 @@ function App() {
       {/* Custom Modal Popup Component */}
       <CustomModalPopup url={'https://dummyjson.com/users'}/>
       {/* GitHub Profile Finder Component */}
-      <ProfileFinder />
+      <ProfileFinder url={'https://api.github.com/users/'}/>
     </div>
   );
 }
