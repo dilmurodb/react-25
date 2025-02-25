@@ -7,6 +7,7 @@ export default function CustomModalPopup({ url }) {
 
     const [modalPopup, setModalPopup] = useState(false)
     const [currentPopup, setCurrentPopup] = useState([])
+    const [clickStart, setClickStart] = useState(false)
     const [data, setData] = useState([])
     const [isLoading, setIsLoading] = useState(false)
     const [errorMsg, setErrorMsg] = useState(null)
@@ -38,15 +39,19 @@ export default function CustomModalPopup({ url }) {
         setModalPopup(!modalPopup)
     }
 
-    const handleNextClick = () => {
-        console.log("next clicked")
+    const handleStartClick = (id) => {
+        console.log('You clicked handleStartClick!', id)
+        setClickStart(true)
         setCurrentPopup(data[0])
-        console.log(currentPopup)
-        // data.filter(item => )
     }
 
-    const handlePreviousClick = () => {
-        console.log("previous clicked")
+    const handleNextClick = (id) => {
+        console.log('You clicked handleNextClick!', id)
+        setCurrentPopup(data[id])
+    }
+
+    const handlePreviousClick = (id) => {
+      
     }
 
     console.log(data)
@@ -70,7 +75,9 @@ export default function CustomModalPopup({ url }) {
                 } */}
                 <div className="modal-popup-section">
                   {
-                    modalPopup && <ModalPopup data={data}
+                    modalPopup && <ModalPopup
+                                         handleStartClick={handleStartClick}
+                                         clickStart={clickStart}
                                          handleModalPopup={handleModalPopup}
                                          currentPopup={currentPopup}
                                          handleNextClick={handleNextClick}

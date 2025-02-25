@@ -1,7 +1,14 @@
 
 
 
-export default function ModalPopup({ handleModalPopup, data, currentPopup, handleNextClick, handlePreviousClick }) {
+export default function ModalPopup({ 
+                                handleModalPopup, 
+                                currentPopup, 
+                                handleStartClick, 
+                                clickStart, 
+                                handleNextClick, 
+                                handlePreviousClick
+                             }) {
     return <div className="modal-popup-container">
                 <div className="modal-popup-header">
                     <div className="modal-popup-header-h2">
@@ -18,12 +25,69 @@ export default function ModalPopup({ handleModalPopup, data, currentPopup, handl
                     </div>
                 </div>
                 <div className="modal-popup-body">
-                    <span onClick={handlePreviousClick} className="modal-popup-less-than">&lt;</span>
-                    <p>Body</p>
-                    <span onClick={handleNextClick} className="modal-popup-greater-than">&gt;</span>
+                    <span onClick={() => handlePreviousClick(currentPopup.id)} className="modal-popup-less-than">&lt;</span>
+                    <div className="modal-popup-body-content-container">
+                        <div>
+                          {
+                            currentPopup.image 
+                                ?
+                            <img src={currentPopup.image} />
+                                :
+                            <img src="/" alt="image"/>
+                            }  
+                        </div>
+                        <div>
+                          {
+                            currentPopup.company
+                                ?
+                            <p>Company Name: {currentPopup.company.name}</p>
+                                :
+                            <p>Company Name:</p>
+                            }
+                          {
+                            currentPopup.company
+                                ?
+                            <p>Job position: {currentPopup.company.title}</p>
+                                :
+                            <p>Job position:</p>
+                            }
+                          {
+                            currentPopup.company
+                                ?
+                            <p>Department: {currentPopup.company.department}</p>
+                                :
+                            <p>Department:</p>
+                            }
+                          {
+                            currentPopup.university
+                                ?
+                            <p>Education:  {currentPopup.university}</p>
+                                :
+                            <p>Education: </p>
+                            }
+                        </div>
+                    </div>
+                    {
+                       clickStart
+                            ?
+                        <span onClick={() => handleNextClick(currentPopup.id)} className="modal-popup-greater-than">&gt;</span>
+                            :
+                        <span onClick={() => handleStartClick(currentPopup.id)} className="modal-popup-greater-than">Start&gt;</span>
+                    }
                 </div>
                 <div className="modal-popup-footer">
-                    <p>Footer</p>
+                    { currentPopup.phone
+                        ?
+                    <p>Phone: {currentPopup.phone}</p>
+                        :
+                    <p>Phone:</p>
+                    }
+                    { currentPopup.email
+                        ?
+                    <p>Email: {currentPopup.email}</p>
+                        :
+                    <p>Email:</p>
+                    }
                 </div>
             </div>
 }

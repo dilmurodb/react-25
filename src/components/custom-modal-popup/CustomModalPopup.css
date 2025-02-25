@@ -60,6 +60,10 @@
     height: 40vh;
     background-color: green;
 }
+
+.modal-popup-body-content-container {
+    display: flex;
+}
 .modal-popup-body p {
     color: white;
 }
