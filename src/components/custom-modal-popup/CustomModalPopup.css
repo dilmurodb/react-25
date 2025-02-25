@@ -2,3 +2,70 @@
     height: 100vh;
     background-color:bisque;
 }
+
+.h1-and-btn-container {
+    height: 5vh;
+}
+
+.modal-popup-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+.custom-modal-popup-btn {
+    height: 20px;
+    width: 150px;
+}
+
+.modal-popup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    /* height: 100vh; */
+    width: 80vw;
+    background-color:lightgreen;
+}
+
+.modal-popup-header {
+    display: flex;
+    width: 80vw;
+    height: 10vh;
+    background-color: black;
+}
+.modal-popup-header h1 {
+    color: white;
+}
+.modal-popup-header-h1 {
+    width: 97%;
+    align-self: center;
+}
+.modal-popup-header-span {
+    width: 3%;
+    align-content: center;
+}
+.modal-popup-x {
+    color: white;
+    font-size: 2rem;
+}
+
+.modal-popup-body {
+    width: 80vw;
+    height: 40vh;
+    background-color: green;
+}
+.modal-popup-body p {
+    color: white;
+}
+
+.modal-popup-footer {
+    width: 80vw;
+    height: 10vh;
+    background-color: black;
+}
+.modal-popup-footer p {
+    color: white;
+}
