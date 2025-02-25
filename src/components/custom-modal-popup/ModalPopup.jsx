@@ -12,7 +12,9 @@ export default function ModalPopup({ handleModalPopup }) {
                 </div>
                </div>
                <div className="modal-popup-body">
+                <span className="modal-popup-less-than">&lt;</span>
                 <p>Body</p>
+                <span className="modal-popup-greater-than">&gt;</span>
                </div>
                <div className="modal-popup-footer">
                 <p>Footer</p>

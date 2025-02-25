@@ -53,12 +53,25 @@
 }
 
 .modal-popup-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 80vw;
     height: 40vh;
     background-color: green;
 }
 .modal-popup-body p {
     color: white;
+}
+
+.modal-popup-less-than {
+    color: white;
+    font-size: 2rem;
+}
+
+.modal-popup-greater-than {
+    color: white;
+    font-size: 2rem;
 }
 
 .modal-popup-footer {
