@@ -36,10 +36,10 @@
     height: 10vh;
     background-color: black;
 }
-.modal-popup-header h1 {
+.modal-popup-header h2 {
     color: white;
 }
-.modal-popup-header-h1 {
+.modal-popup-header-h2 {
     width: 97%;
     align-self: center;
 }

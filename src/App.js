@@ -41,7 +41,7 @@ function App() {
       {/* Custom Tabs Component */}
       <CustomTabs />
       {/* Custom Modal Popup Component */}
-      <CustomModalPopup />
+      <CustomModalPopup url={'https://dummyjson.com/users'}/>
     </div>
   );
 }
