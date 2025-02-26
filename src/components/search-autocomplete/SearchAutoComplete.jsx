@@ -16,7 +16,6 @@ export default function SearchAutoComplete({ url }) {
             const response = await fetch(url)
             if (!response.ok) throw Error('Did not receive expected data')
             const res = await response.json()
-            console.log(res)
             let usersArray = res.users
             setUsers(usersArray)
             setErrorMsg(null)
@@ -29,7 +28,6 @@ export default function SearchAutoComplete({ url }) {
 
     const handleSearch = (value) => {
         setSearchUser(value)
-        console.log(value)
         const newArr = users.map(user => user.firstName.toLowerCase() + ' ' + user.lastName.toLowerCase())
         if (value.length > 1) {
            let matchArr = newArr.filter(item => item.indexOf(value.toLowerCase()) > -1)
