@@ -31,10 +31,8 @@ export default function SearchAutoComplete({ url }) {
         setSearchUser(value)
         console.log(value)
         const newArr = users.map(user => user.firstName.toLowerCase() + ' ' + user.lastName.toLowerCase())
-        // console.log(newArr)
         if (value.length > 1) {
            let matchArr = newArr.filter(item => item.indexOf(value.toLowerCase()) > -1)
-            console.log(matchArr)
             setMatchingUsers(matchArr) 
         } else if (value.length < 1) {
             setMatchingUsers([])
@@ -69,10 +67,5 @@ export default function SearchAutoComplete({ url }) {
                         :
                     null
                 }
-                {/* <ul>
-                    {
-                        users.map(user => <li key={user.id}>{user.firstName} {user.lastName}</li>)
-                    }
-                </ul> */}
            </div>
 }
