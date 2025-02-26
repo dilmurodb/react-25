@@ -12,6 +12,7 @@ import CustomTabs from './components/custom-tabs/CustomTabs';
 import CustomModalPopup from './components/custom-modal-popup/CustomModalPopup';
 import ProfileFinder from './components/github-profile-finder/ProfileFinder';
 import SearchAutoComplete from './components/search-autocomplete/SearchAutoComplete';
+import TicTacToe from './components/tic-tac-toe/TicTacToe';
 
 function App() {
   return (
@@ -48,6 +49,8 @@ function App() {
       <ProfileFinder url={'https://api.github.com/users/'}/>
       {/* Search Auto Complete Component */}
       <SearchAutoComplete url={'https://dummyjson.com/users?limit=99'} />
+      {/* Tic Tac Toe Component */}
+      <TicTacToe />
     </div>
   );
 }

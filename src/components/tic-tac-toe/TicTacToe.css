@@ -1,0 +1,21 @@
+.tic-tac-toe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+.tic-tac-toe-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 306px;
+    width: 306px;
+}
+
+.tic-tac-toe-box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
