@@ -47,7 +47,7 @@ function App() {
       {/* GitHub Profile Finder Component */}
       <ProfileFinder url={'https://api.github.com/users/'}/>
       {/* Search Auto Complete Component */}
-      <SearchAutoComplete url={'https://dummyjson.com/users?limit=0'} />
+      <SearchAutoComplete url={'https://dummyjson.com/users?limit=99'} />
     </div>
   );
 }

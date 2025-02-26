@@ -5,3 +5,6 @@
 .search-autocomplete li {
     color: black;
 }
+.search-autocomplete h3 {
+    color: red;
+}

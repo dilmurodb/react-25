@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react'
 export default function SearchAutoComplete({ url }) {
 
     const [users, setUsers] = useState([])
+    const [searchUser, setSearchUser] = useState('')
+    const [matchingUsers, setMatchingUsers] = useState([])
     const [isLoading, setIsLoading] = useState(false)
     const [errorMsg, setErrorMsg] = useState(null)
 
@@ -25,6 +27,21 @@ export default function SearchAutoComplete({ url }) {
         }
     }
 
+    const handleSearch = (value) => {
+        setSearchUser(value)
+        console.log(value)
+        const newArr = users.map(user => user.firstName.toLowerCase() + ' ' + user.lastName.toLowerCase())
+        // console.log(newArr)
+        if (value.length > 1) {
+           let matchArr = newArr.filter(item => item.indexOf(value.toLowerCase()) > -1)
+            console.log(matchArr)
+            setMatchingUsers(matchArr) 
+        } else if (value.length < 1) {
+            setMatchingUsers([])
+        }
+        
+    }
+
     useEffect(() => {
         fetchUsers()
     }, [url])
@@ -32,10 +49,30 @@ export default function SearchAutoComplete({ url }) {
 
     return <div className="search-autocomplete">
                 Search Auto Complete Component
-                <ul>
+                <input 
+                    type='text'
+                    placeholder='search...'
+                    value={searchUser}
+                    onChange={(e) => handleSearch(e.target.value)}/>
+                {
+                    isLoading ? <h3>Data is Loading...</h3> : null
+                }
+                {
+                    errorMsg ? <h3>{errorMsg}</h3> : null
+                }
+                {
+                    matchingUsers
+                        ?
+                    <ul>
+                        {matchingUsers.map((matchingUser, index) => <li key={index}>{matchingUser}</li>)}
+                    </ul>
+                        :
+                    null
+                }
+                {/* <ul>
                     {
                         users.map(user => <li key={user.id}>{user.firstName} {user.lastName}</li>)
                     }
-                </ul>
+                </ul> */}
            </div>
 }
