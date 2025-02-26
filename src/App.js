@@ -11,6 +11,7 @@ import ScrollIndicator from './components/scroll-indicator/ScrollIndicator';
 import CustomTabs from './components/custom-tabs/CustomTabs';
 import CustomModalPopup from './components/custom-modal-popup/CustomModalPopup';
 import ProfileFinder from './components/github-profile-finder/ProfileFinder';
+import SearchAutoComplete from './components/search-autocomplete/SearchAutoComplete';
 
 function App() {
   return (
@@ -45,6 +46,8 @@ function App() {
       <CustomModalPopup url={'https://dummyjson.com/users'}/>
       {/* GitHub Profile Finder Component */}
       <ProfileFinder url={'https://api.github.com/users/'}/>
+      {/* Search Auto Complete Component */}
+      <SearchAutoComplete url={'https://dummyjson.com/users?limit=0'} />
     </div>
   );
 }

@@ -1,0 +1,7 @@
+.search-autocomplete {
+    min-height: 100vh;
+    background-color: gold;
+}
+.search-autocomplete li {
+    color: black;
+}
